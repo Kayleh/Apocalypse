@@ -59,9 +59,8 @@ public class HttpDownloader
             endPoint = new int[THREAD_NUM + 1];
             int block = fileSize / THREAD_NUM;
             for (int i = 0; i < THREAD_NUM; i++)
-            {
                 endPoint[i] = block * i;
-            }
+
             endPoint[THREAD_NUM] = fileSize;
             for (int i = 0; i < THREAD_NUM; i++)
             {
